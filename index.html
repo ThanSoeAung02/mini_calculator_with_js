@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .content{
+            width: 700px;
+            margin-left: 300px;
+            height: fit-content;
+        }
+        .form{
+            display: block;
+            justify-content: center;
+            margin-top: 100px;
+            background-color: rgb(18, 230, 209)
+        }
+        .input-group{
+           margin-top: 20px;
+           text-align: center;
+           color: black;
+        }
+        .result-final {
+            background-color: black;
+            color: white;
+            text-align: center;
+            height: 30px;
+            margin-bottom: 30px;
+        }
+        .btn-cal{
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .label{
+            display: block;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .user-input{
+            width: 200px;
+            height: 20px;
+            display: block;
+            margin-left: 250px;
+        }
+        .error{
+            color: red;
+            size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="content">
+        <form action="" class="form">
+            <div class="result-final" id="result">
+                000
+            </div>
+            <div class="input-group">
+                <label for="" class="label">Enter First Number</label>
+                <input type="number" id="firstNumber" class="user-input" placeholder="Enter your first number">
+                <small class="error" id="numOneError">Number One is required</small>
+            </div>
+            <div class="input-group">
+                <label for="" class="label">Enter Second Number</label>
+                <input type="number" id="secondNumber" class="user-input" placeholder="Enter your second number">
+                <small class="error" id="numTwoError">Number Two is required</small>
+            </div>
+            <div class="input-group">
+                <label for="" class="label">Operators</label>
+                <select name="user-input" id="operation" class="user-input">
+                    <option value="empty">Choose Operator</option>
+                    <option value="addition">+</option>
+                    <option value="substraction">-</option>
+                    <option value="multiplication">*</option>
+                    <option value="division">/</option>
+                </select>
+                <small class="error" id="operatorError">Operator is required</small>
+            </div>
+            <div class="btn-cal">
+                <button type="button" id="btnCalculate" class="btn-cal" onclick="calculate()">Calculate</button>
+            </div>
+        </form>
+    </section>
+</body>
+<script src="./revision.js"></script>
+</html>
